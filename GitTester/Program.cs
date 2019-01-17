@@ -8,11 +8,19 @@ namespace GitTester
     {
         static void Main()
         {
+            int x, y;
             int userNumber;
             int counter = 0;
-            int number = new Random().Next(1, 101);
-            
-            Console.WriteLine("I am thinking of a number between 1-100; what is it?");
+
+            Console.WriteLine("Enter the lowest number you would like.");
+            x = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the highest number you would like.");
+            y = Convert.ToInt32(Console.ReadLine());
+
+            int number = new Random().Next(x, y);
+
+            Console.WriteLine("I am thinking of a number between " + x + "-" + y + "; what is it?");
             userNumber = Convert.ToInt32(Console.ReadLine());
             counter++;
             while (userNumber != number)
